@@ -35,9 +35,9 @@ const Countries = () => {
       >
         {data
           .filter((name) => {
-            return searchQuery.toLowerCase() === ""
-              ? name
-              : name.common.toLowerCase().includes(searchQuery);
+            if(searchQuery === "") return true;
+            const regex = new RegExp(searchQuery, "i");
+            return regex.test(name.common);
           })
           .map((countries) => (
             <Card
