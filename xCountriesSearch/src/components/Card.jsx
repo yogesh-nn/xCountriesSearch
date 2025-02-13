@@ -1,7 +1,6 @@
 // eslint-disable-next-line react/prop-types
 const Card = ({ common, png }) => {
   return (
-    <div className="countryCard">
       <div
         className="countryCard"
         style={{
@@ -24,7 +23,6 @@ const Card = ({ common, png }) => {
         />
         <p>{common}</p>
       </div>
-    </div>
   );
 };
 
